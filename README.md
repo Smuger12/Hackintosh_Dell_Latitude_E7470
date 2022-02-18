@@ -23,7 +23,7 @@
 
 <details>  
 <summary><strong>My Hardware</strong></summary>
-</br>
+<br>
 
 | Model              | Dell Latitude E7470                        |
 |:-------------------|:-------------------------------------------|
@@ -109,7 +109,6 @@ You need to plug in the installation USB created previously everytime you start 
 
 <details>
 <summary><strong>Fixing iServices</strong></summary>
-</br>
 
 - In order to get Apple Services like App Store working, you need to generate your own SMBIOS(The included one is only for reference).
 
@@ -122,6 +121,6 @@ You need to plug in the installation USB created previously everytime you start 
 - [Acidanthera](https://github.com/acidanthera) for OpenCore, Lilu and related kexts.
 - [OpenIntelWireless](https://github.com/OpenIntelWireless) and others whose kexts I've used.
 - [Dortania](https://dortania.github.io) for installation and other guides.
-- [Aditya Bakare](https://github.com/adityabakare) [Big Sur](https://github.com/adityabakare/macOS-Dell-Latitude-E7470)
-- [Yosef-y053f01](https://github.com/y053f01)
+- [Aditya Bakare](https://github.com/adityabakare) - [Big Sur](https://github.com/adityabakare/macOS-Dell-Latitude-E7470)
+- [Yosef-y053f01](https://github.com/y053f01) for most of the files I used.
 - Everyone else who contributed to this repository directly/indirectly.
