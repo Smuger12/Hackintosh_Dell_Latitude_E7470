@@ -72,21 +72,21 @@
 
 ## Current configuration
 
-- macOS: Monterey 12.0.1 (21A559)
+- macOS: Monterey 12.2.1
 - OpenCore: 0.7.4
 
 ## Installation
 
 <details>
 <summary><strong>Create the USB</strong></summary>
-</br>
+<br>
 
 Follow the [guide on the OpenCore documentation](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) to create a USB for installation. Choose the operating system you use to create the USB and proceed with the guide. At the end of the Create USB section, OpenCore will ask us to do additional configurations. We don't need to do any of that because the `EFI` folder in this repository provides all necessary configurations we need for installation on Dell Latitude E7470.
 </details>
 
 <details>
 <summary><strong>Boot and Install macOS</strong></summary>
-</br>
+<br>
 
 - Plug in the USB we created to your Dell computer
 - Press the Power button to turn on our computer (if you used the Dell to create the USB, shutdown the computer first)
@@ -104,6 +104,47 @@ Follow the [guide on the OpenCore documentation](https://dortania.github.io/Open
 </br>
 
 You need to plug in the installation USB created previously everytime you start macOS after shutdown. If you want to boot without the USB, follow [this guide by OpenCore](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb).
+
+</details>
+
+<details>
+<summary><strong>Fixing UK keyboard</strong></summary>
+<br>
+
+You may encounter a keyboard mapping issue where your tilde key (~/`) is wrongly mapped to (§/±). The solution is simple, you can remap the key using native MacOS commands as follows:
+```
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035}]}'
+```
+If this problem is resolved in the next release, you can remove any remappings back to initial just pass an empty array:
+```
+hidutil property --set '{"UserKeyMapping":[]}'
+```
+Credit: https://apple.stackexchange.com/a/374074/398222
+<details>
+<summary>
+<strong>Auto remap keys every time you log in</strong>
+<br>
+
+</summary>
+
+* Start Automator.app;
+* Select "Application";
+* Click "Show library" in the toolbar (if hidden);
+* Add "Run shell script" (from the Actions/Utilities);
+* Copy-and-paste the following script into the window:
+```
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035}]}'
+```
+* Test it;
+* Save it somewhere: a file called your_name.app will be created);
+* Depending your MacOSX version:
+    * Old versions: Go to System Preferences → Accounts → Login items, or
+    * New version: Go to System Preferences → Users and Groups → Login items (top right);
+* Add this newly-created app;
+
+Credit: https://superuser.com/a/465506/1046656
+</details>
+<br><br>
 
 </details>
 
