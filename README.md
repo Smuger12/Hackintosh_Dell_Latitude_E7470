@@ -1,4 +1,6 @@
-# Dell Latitude E7470 macOS Monterey (OpenCore)
+<img src="https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Logos/OpenCore_with_text_Small.png" width="200" height="48"/>
+
+# macOS Monterey on Dell Latitude E7470 
 
 <img align="right" src="https://imgur.com/25u1lIk.jpg" width="300">
 
@@ -66,7 +68,7 @@
 <summary><strong>What's not working</strong></summary>
 </br>
 
-- [ ] Multitouch gestures for ALPS touchpad.([#1](https://github.com/adityabakare/macOS-Dell-Latitude-E7470/issues/1))
+- [ ] [Multitouch gestures for ALPS touchpad.](https://github.com/adityabakare/macOS-Dell-Latitude-E7470/issues/1)
 
 </details>
 
@@ -111,41 +113,8 @@ You need to plug in the installation USB created previously everytime you start 
 <summary><strong>Fixing UK keyboard</strong></summary>
 <br>
 
-You may encounter a keyboard mapping issue where your tilde key (~/`) is wrongly mapped to (§/±). The solution is simple, you can remap the key using native MacOS commands as follows:
-```
-hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035}]}'
-```
-If this problem is resolved in the next release, you can remove any remappings back to initial just pass an empty array:
-```
-hidutil property --set '{"UserKeyMapping":[]}'
-```
-Credit: https://apple.stackexchange.com/a/374074/398222
-<details>
-<summary>
-<strong>Auto remap keys every time you log in</strong>
-<br>
-
-</summary>
-
-* Start Automator.app;
-* Select "Application";
-* Click "Show library" in the toolbar (if hidden);
-* Add "Run shell script" (from the Actions/Utilities);
-* Copy-and-paste the following script into the window:
-```
-hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035}]}'
-```
-* Test it;
-* Save it somewhere: a file called your_name.app will be created);
-* Depending your MacOSX version:
-    * Old versions: Go to System Preferences → Accounts → Login items, or
-    * New version: Go to System Preferences → Users and Groups → Login items (top right);
-* Add this newly-created app;
-
-Credit: https://superuser.com/a/465506/1046656
-</details>
-<br><br>
-
+Choose layout file from [`Keyboard_Layouts`](https://github.com/Smuger12/Hackintosh_Dell_Latitude_E7470/tree/main/Keyboard_Layouts) repo directory and put it in `/Library/Keyboard Layouts` directory.
+   
 </details>
 
 <details>
