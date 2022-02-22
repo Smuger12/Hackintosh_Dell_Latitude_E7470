@@ -4,7 +4,6 @@
 
 <img align="right" src="https://imgur.com/25u1lIk.jpg" width="300">
 
-
 ## Introduction
 
 <details>  
@@ -49,12 +48,12 @@
 <summary><strong>What's working</strong></summary>
 </br>
 
-- [x] Intel HD 520 Graphics `incuding graphics acceleration`
+- [x] Intel HD 520 Graphics **`including graphics acceleration`**
 - [x] All USB ports
 - [x] Internal camera
 - [x] WiFi using [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)
 - [x] Bluetooth using [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) (without IntelBluetoothInjector.kext) and BlueToolFixup.kext from: [BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
-- [x] Shutdown/ Reboot/ Sleep/ Wake
+- [x] Shutdown/Reboot/Sleep/Wake
 - [x] Speakers and headphones jack
 - [x] Intel Gigabit Ethernet
 - [x] iMessage, FaceTime, App Store
@@ -91,11 +90,11 @@ Follow the [guide on the OpenCore documentation](https://dortania.github.io/Open
 <br>
 
 - Plug in the USB we created to your Dell computer
-- Press the Power button to turn on our computer (if you used the Dell to create the USB, shutdown the computer first)
+- Press the Power button to turn on our computer (if you used the Dell to create the USB, shutdown the computer first) and spam `F12` key to launch boot menu and choose your USB to boot from it
 - Wait and we will see the Apple icon on a black screen with a progress bar at the bottom
 - Then, we will see a menu with four options. Make sure select `Disk Utility` to partition your disk appropriately and format the partition for installing macOS into `APFS`. If you are dual booting with other operating systems, an easier way would be to partition the drive beforehand as some formats like NTFS are readonly on macOS.
 - Follow the installation steps and configure the preferences to your liking
-- Log in to macOS and enjoy
+- Log in to macOS and enjoy :D
 
 </details>
 
@@ -113,7 +112,7 @@ You need to plug in the installation USB created previously everytime you start 
 <summary><strong>Fixing UK keyboard</strong></summary>
 <br>
 
-Choose layout file from [`Keyboard_Layouts`](https://github.com/Smuger12/Hackintosh_Dell_Latitude_E7470/tree/main/Keyboard_Layouts) repo directory and put it in `/Library/Keyboard Layouts` directory.
+Choose layout file from [`Keyboard_Layouts`](./Keyboard_Layouts) repo directory and put it in `/Library/Keyboard Layouts` directory.
    
 </details>
 
