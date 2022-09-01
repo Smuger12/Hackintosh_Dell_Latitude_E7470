@@ -1,3 +1,7 @@
+**pls don't use this ~~shit~~ there is better [ones](https://osxlatitude.com/forums/topic/9179-dell-latitude-e7x70-clover-and-opencore/?do=findComment&comment=104256)**
+
+<br>
+
 <img src="https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Logos/OpenCore_with_text_Small.png" width="200" height="48"/>
 
 # macOS Monterey on Dell Latitude E7470 
